@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 
+Roboto, Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+/* ========================================
+   顶部⼤横幅（Banner）
+   ======================================== */
+.banner {
+    background: #888;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    margin-bottom: 50px;
+}
+.banner h1 {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.banner p {
+    font-size: 24px;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+/* ========================================
+   ⽂章列表
+   ======================================== */
+.post-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* 每⼀篇⽂章条⽬：标题在左，⽇期在右 */
+.post-item {
+    display: flex;
+    justify-content: space-between;  /* 两端对⻬，标题靠左，⽇期靠右 
+*/
+    align-items: baseline;           /* 基线对⻬ */
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;   /* 可选：细分割线，更清爽 */
+}
+/* 标题链接 */
+.post-item a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s;
+    flex-shrink: 1;                  /* 标题过⻓时允许收缩 */
+    margin-right: 20px;              /* 与⽇期保持间距 */
+}
+.post-item a:hover {
+    text-decoration: underline;
+}
+ 
+构建⽂章⽬录和⼀个新的⽂章 
+在代码库中创建⼀个_post⽬录，并且在这个⽬录⾥放⼀个2026-09-09-my-first-day.md
+⽂件
+/* 右侧⽇期 */
+.post-meta {
+    font-size: 18px;                 /* ⽐标题⼩，突出主次 */
+    font-weight: normal;
+    color: #999;
+    white-space: nowrap;             /* 强制⽇期不换⾏ */
+    flex-shrink: 0;                  /* ⽇期固定宽度，不被挤压 */
+}
+/* ========================================
+   ⼿机端适配（屏幕宽度⼩于 600px）
+   ======================================== */
+@media (max-width: 600px) {
+    .banner {
+        padding: 60px 20px;
+    }
+    .banner h1 {
+        font-size: 40px;
+    }
+    .post-item {
+        font-size: 22px;             /* ⼿机上缩⼩字号 */
+        flex-wrap: wrap;             /* 允许换⾏，避免太拥挤 */
+    }
+    .post-meta {
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
