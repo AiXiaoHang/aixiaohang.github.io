@@ -1,6 +1,6 @@
 ---
-layout: default
-title: "Bugku CTF - alert 题目 WriteUp"
+layout: post
+title: "Bugku CTF - alert 题目"
 date: 2026-09-28
 categories: [CTF, WriteUp]
 ---
