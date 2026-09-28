@@ -2,10 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial
-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ 
-site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -16,16 +14,16 @@ site.title }}</title>
             <p>{{ site.description }}</p>
         {% endif %}
     </div>
-    <!-- ===== ⽂章列表（含⽇期） ===== -->
+
+    <!-- ===== 文章列表（含日期） ===== -->
     <div class="post-list">
         {% for post in site.posts %}
-          <div class="post-item">
-            <a href="{{ post.url }}">
-              {{ post.title }}</a>
-            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-          </div>
+            <div class="post-item">
+                <a href="{{ post.url }}">
+                    {{ post.title }}</a>
+                <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+            </div>
         {% endfor %}
-      </div>
     </div>
 </body>
 </html>
