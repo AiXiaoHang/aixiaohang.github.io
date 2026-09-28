@@ -19,22 +19,13 @@ site.title }}</title>
     <!-- ===== ⽂章列表（含⽇期） ===== -->
     <div class="post-list">
         {% for post in site.posts %}
-    <div class="post-item" style="display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid #eee; padding: 10px 0;">
-      
-      <!-- 左侧：文章链接和标题（增加了不允许换行的样式） -->
-      <div class="post-title" style="flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-        <a href="{{ post.url }}" style="text-decoration: none; color: #333; font-weight: bold;">
-          {{ post.title }}
-        </a>
+          <div class="post-item">
+            <a href="{{ post.url }}">
+              {{ post.title }}</a>
+            <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+          </div>
+        {% endfor %}
       </div>
-
-      <!-- 右侧：日期（保持右对齐） -->
-      <div class="post-meta" style="flex-shrink: 0; color: #666;">
-        {{ post.date | date: "%B %-d, %Y" }}
-      </div>
-
-    </div>
-  {% endfor %}
     </div>
 </body>
 </html>
