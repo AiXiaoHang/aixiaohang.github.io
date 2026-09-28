@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: post
 title: "Bugku CTF - POST 题目 WriteUp"
-date: 2026-09-28 14:00:00 +0800
+date: 2026-09-28
 categories: [CTF, WriteUp]
 ---
 
