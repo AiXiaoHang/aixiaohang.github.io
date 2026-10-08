@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bugku CTF - source 题目 WriteUp"
+title: "Bugku CTF - source 题目"
 date: 2026-10-08
 categories: [CTF, WriteUp]
 ---
